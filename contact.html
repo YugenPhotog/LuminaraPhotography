@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Luminara Photography</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #FAF8F4;
+      color: #555555;
+      margin: 0;
+    }
+    header {
+      background-color: #F5E9D6;
+      padding: 1rem 2rem;
+      text-align: right;
+    }
+    nav a {
+      font-family: 'Playfair Display', serif;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #555555;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #D4AF37;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #D4AF37;
+    }
+    .contact-section {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    .contact-section p {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+    .contact-details a {
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Raleway', sans-serif;
+    }
+    button {
+      background-color: #D4AF37;
+      color: #FAF8F4;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #b9912b;
+    }
+    footer {
+      background: #555555;
+      color: #FAF8F4;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer a {
+      color: #D4AF37;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+    }
+    footer a:hover {
+      color: #F7E4E1;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h1>Let's Connect</h1>
+  <p>Have questions or want to book your session? Reach out via email or send a message below. I look forward to capturing something beautiful with you.</p>
+  <div class="contact-details">
+    <p>Email: <a href="mailto:stvastn@icloud.com">stvastn@icloud.com</a> &nbsp; | &nbsp; Instagram: <a href="https://www.instagram.com/luminaraphotography" target="_blank">@luminaraphotography</a></p>
+  </div>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+    <input type="hidden" name="form-name" value="contact">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Luminara Photography. All rights reserved.</p>
+  <p>
+    <a href="https://www.instagram.com/luminaraphotography" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:stvastn@icloud.com"><i class="fas fa-envelope"></i></a>
+  </p>
+</footer>
+
+</body>
+</html>
