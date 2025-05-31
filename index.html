@@ -119,31 +119,44 @@
     .hero {
       position: relative;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #f4eee8 0%, #E8D5C4 50%, #D4AF37 100%);
-      min-height: 70vh;
-      text-align: center;
-      padding: 3rem 2rem;
+      height: 300px; /* Fixed banner height */
+      text-align: left;
+      padding: 2rem;
     }
     
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1200px;
+      width: 100%;
+      height: 100%;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    /* Make the logo container fill the height of the hero */
     .hero-logo {
-      margin-bottom: 2rem;
-      animation: fadeInDown 1s ease-out;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     
+    /* Logo matches hero height */
     .hero-logo img {
-      height: clamp(6rem, 12vw, 12rem);
+      height: 100%;
       width: auto;
       object-fit: contain;
       filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
     }
     
+    /* Center the text within its container */
     .hero-text {
-      max-width: 800px;
+      flex: 1;
       color: #555555;
-      animation: fadeInUp 1s ease-out 0.3s both;
+      text-align: center;
     }
     
     .hero-text h1 {
@@ -337,16 +350,22 @@
       }
       
       .hero {
-        min-height: 60vh;
-        padding: 2rem 1rem;
+        height: 250px; /* Reduced height on tablet sizes */
+        padding: 1.5rem 1rem;
+        text-align: center;
+      }
+      
+      .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
       }
       
       .hero-logo {
-        margin-bottom: 1.5rem;
+        height: auto; /* Let the logo resize proportionally */
       }
       
       .hero-logo img {
-        height: clamp(4.5rem, 10vw, 9rem);
+        height: clamp(3rem, 6vw, 5rem);
       }
       
       .quick-links {
@@ -376,16 +395,16 @@
     /* Small mobile adjustments */
     @media (max-width: 480px) {
       .hero {
-        min-height: 50vh;
-        padding: 1.5rem 0.75rem;
+        height: 200px; /* Further reduced height on small phones */
+        padding: 1rem 0.75rem;
       }
       
-      .hero-logo {
-        margin-bottom: 1rem;
+      .hero-content {
+        gap: 1rem;
       }
       
       .hero-logo img {
-        height: clamp(3.5rem, 8vw, 6rem);
+        height: clamp(2.5rem, 5vw, 4rem);
       }
       
       .quick-links {
@@ -449,12 +468,14 @@
   </header>
 
   <section class="hero" id="home">
-    <div class="hero-logo">
-      <img src="images/luminara_transparent.png" alt="Luminara Photography Logo">
-    </div>
-    <div class="hero-text">
-      <h1>Capturing Light, Life, and Love</h1>
-      <p>Timeless photography for families, couples, and professionals across Central Illinois and St. Louis.</p>
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="images/luminara_transparent.png" alt="Luminara Photography Logo">
+      </div>
+      <div class="hero-text">
+        <h1>Capturing Light, Life, and Love</h1>
+        <p>Timeless photography for families, couples, and professionals across Central Illinois and St. Louis.</p>
+      </div>
     </div>
   </section>
 
